@@ -1,5 +1,6 @@
 export default {
     "datetime": "2016-07-26T14:05:48.000Z",
+    "lineCode": "B",
     "stations": [{
         "name": "Baker Street",
         "stationCode": "BST",

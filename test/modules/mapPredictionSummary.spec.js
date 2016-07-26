@@ -67,6 +67,7 @@ describe('mapPredictionSummary', function () {
 
     const feedMapped = {
       datetime: testDate.toISOString(),
+      lineCode: null,
       stations: []
     };
 
@@ -106,7 +107,7 @@ describe('mapPredictionSummary', function () {
   }));
 
   it('should map the Prediction Summary correctly', function () {
-    const result = mapPredictionSummary(predictionSummaryParsedMock);
+    const result = mapPredictionSummary(predictionSummaryParsedMock, predictionSummaryMappedMock.lineCode);
 
     expect(result).to.eql(predictionSummaryMappedMock);
   });
