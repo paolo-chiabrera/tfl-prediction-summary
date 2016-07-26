@@ -2,7 +2,7 @@ export default {
     "ROOT": {
         "Time": {
             "$": {
-                "TimeStamp": "2016/07/26 16:05:48"
+                "TimeStamp": "2016-07-26T14:05:48.000Z"
             }
         },
         "S": [{
