@@ -1,4 +1,4 @@
-# TFL Prediction Summary [![Build Status](https://travis-ci.org/paolo-chiabrera/tfl-prediction-summary.svg?branch=master)](https://travis-ci.org/paolo-chiabrera/tfl-prediction-summary) [![Build Status](https://travis-ci.org/paolo-chiabrera/tfl-prediction-summary.svg?branch=master)](https://travis-ci.org/paolo-chiabrera/tfl-prediction-summary)
+# TFL Prediction Summary [![Build Status](https://travis-ci.org/paolo-chiabrera/tfl-prediction-summary.svg?branch=master)](https://travis-ci.org/paolo-chiabrera/tfl-prediction-summary) [![Coverage Status](https://coveralls.io/repos/github/paolo-chiabrera/tfl-prediction-summary/badge.svg?branch=master)](https://coveralls.io/github/paolo-chiabrera/tfl-prediction-summary?branch=master)
 
 [![NPM](https://nodei.co/npm/tfl-prediction-summary.png)](https://nodei.co/npm/tfl-prediction-summary/)
 
