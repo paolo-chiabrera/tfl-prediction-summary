@@ -1,5 +1,6 @@
 import {expect} from 'chai';
 import sinon from 'sinon';
+import _ from 'lodash';
 
 import TflPredictionSummary from '../lib/index';
 import modules from '../lib/modules/main';
@@ -224,13 +225,18 @@ describe('tfl-prediction-summary', function () {
 
       const _getAllPredictionSummaries = this.spy(tflPredictionSummary, '_getAllPredictionSummaries');
 
+      const expected = _.map(lines, lineCode => {
+        const line = _.clone(predictionSummaryMappedMock);
+        line.lineCode = lineCode;
+        return line;
+      });
+
       tflPredictionSummary.getPredictionSummary().then(res => {
         try {
           sinon.assert.calledOnce(_getAllPredictionSummaries);
           sinon.assert.notCalled(fail);
-
           expect(res.length).to.eql(lines.length);
-          expect(res[0]).to.eql(predictionSummaryMappedMock);
+          expect(res).to.eql(expected);
         } catch (e) {
           done(e);
           return;
