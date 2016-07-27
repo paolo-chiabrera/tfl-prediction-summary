@@ -10,38 +10,38 @@ describe('mapTrain', function () {
     expect(mapTrain).to.be.a('function');
   });
 
-  it('should return an empty Object if called with no arguments', function () {
+  it('should return null if called with no arguments', function () {
     const train = mapTrain();
 
-    expect(train).to.eql({});
+    expect(train).to.eql(null);
   });
 
-  it('should return an empty Object if called without an invalid argument', function () {
+  it('should return null if called without an invalid argument', function () {
     const train = mapTrain(null);
 
-    expect(train).to.eql({});
+    expect(train).to.eql(null);
   });
 
-  it('should return an empty Object if called with an empty Object', function () {
+  it('should return null if called with an empty Object', function () {
     const train = mapTrain({});
 
-    expect(train).to.eql({});
+    expect(train).to.eql(null);
   });
 
-  it('should return an empty Object if called with an Object with invalid attributes', function () {
+  it('should return null if called with an Object with invalid attributes', function () {
     const train = mapTrain({
       $: null
     });
 
-    expect(train).to.eql({});
+    expect(train).to.eql(null);
   });
 
-  it('should return an empty Object if called with an Object without attributes', function () {
+  it('should return null if called with an Object without attributes', function () {
     const train = mapTrain({
       $: {}
     });
 
-    expect(train).to.eql({});
+    expect(train).to.eql(null);
   });
 
   it('should return the mapped Train Object correctly', function () {

@@ -14,4 +14,16 @@ describe('main', function () {
   it('should expose: mapPredictionSummary', function () {
     expect(util.mapPredictionSummary).to.be.a('function');
   });
+
+  it('should expose: mapStation', function () {
+    expect(util.mapStation).to.be.a('function');
+  });
+
+  it('should expose: mapPlatform', function () {
+    expect(util.mapPlatform).to.be.a('function');
+  });
+
+  it('should expose: mapTrain', function () {
+    expect(util.mapTrain).to.be.a('function');
+  });
 });
