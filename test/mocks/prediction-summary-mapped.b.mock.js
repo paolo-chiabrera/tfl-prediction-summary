@@ -7,7 +7,6 @@ export default {
         "platforms": [{
             "name": "Southbound - Platform 8",
             "platformCode": "1",
-            "station": "BST",
             "trains": [{
                 "setNumber": "222",
                 "tripNumber": "17",
@@ -28,7 +27,6 @@ export default {
         }, {
             "name": "Northbound - Platform 9",
             "platformCode": "0",
-            "station": "BST",
             "trains": [{
                 "setNumber": "240",
                 "tripNumber": "13",
