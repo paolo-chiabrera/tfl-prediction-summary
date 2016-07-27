@@ -30,9 +30,9 @@ var tflPredictionSummary = new TflPredictionSummary();
 
 ## API
 
-### tflPredictionSummary.getPredictionSummary(lineName)
+### tflPredictionSummary.getPredictionSummary(lineCode)
 
-`lineName` must be a String and is mandatory, accepted values are: ['B', 'C', 'CI', 'D', 'H', 'J', 'M', 'N', 'P', 'V', 'W']
+`lineCode` (optional) accepted values are: ['B', 'C', 'CI', 'D', 'H', 'J', 'M', 'N', 'P', 'V', 'W']
 
 ```
 const promise = tflPredictionSummary.getPredictionSummary('B');
@@ -42,6 +42,106 @@ promise.then(function (response) {
 }, function (err) {
     /* too bad, something wrong happened */
 });
+```
+
+if a valid lineCode is passed, the promise will return the relative line prediction summary object
+
+```
+tflPredictionSummary.getPredictionSummary('B');
+
+/* response sample */
+
+{
+    "lineCode": "V",
+    "datetime": "2016-07-27T21:08:38.000Z",
+    "stations": [{
+        "name": "Blackhorse Road",
+        "stationCode": "BHR",
+        "platforms": [{
+            "name": "Northbound - Platform 1",
+            "platformCode": "0",
+            "trains": [{
+                "setNumber": "231",
+                "tripNumber": "30",
+                "timeTo": "2:00",
+                "location": "At Tottenham Hale",
+                "dest": "Walthamstow Central",
+                "destCode": "457",
+                "trainCode": "231"
+            }]
+        }, {
+            "name": "Southbound - Platform 2",
+            "platformCode": "1",
+            "trains": []
+        }]
+    }]
+}
+```
+
+if no lineCode is provided, all lines summaries will be retrieved and returned as an ordered array
+
+```
+tflPredictionSummary.getPredictionSummary();
+
+/* response sample */
+
+[{
+    "lineCode": "B",
+    "datetime": "2016-07-27T21:05:36.000Z",
+    "stations": [{
+        "name": "Baker Street",
+        "stationCode": "BST",
+        "platforms": [{
+            "name": "Southbound - Platform 8",
+            "platformCode": "1",
+            "trains": [{
+                "setNumber": "233",
+                "tripNumber": "28",
+                "timeTo": "3:00",
+                "location": "At Edgware Road Platform 2",
+                "dest": "Elephant and Castle",
+                "destCode": "154",
+                "trainCode": "233"
+            }]
+        }, {
+            "name": "Northbound - Platform 9",
+            "platformCode": "0",
+            "trains": [{
+                "setNumber": "231",
+                "tripNumber": "25",
+                "timeTo": "1:00",
+                "location": "Between Regents Park and Baker Street",
+                "dest": "Stonebridge Park",
+                "destCode": "345",
+                "trainCode": "231"
+            }]
+        }]
+    }]
+}, {
+    "lineCode": "V",
+    "datetime": "2016-07-27T21:08:38.000Z",
+    "stations": [{
+        "name": "Blackhorse Road",
+        "stationCode": "BHR",
+        "platforms": [{
+            "name": "Northbound - Platform 1",
+            "platformCode": "0",
+            "trains": [{
+                "setNumber": "231",
+                "tripNumber": "30",
+                "timeTo": "2:00",
+                "location": "At Tottenham Hale",
+                "dest": "Walthamstow Central",
+                "destCode": "457",
+                "trainCode": "231"
+            }]
+        }, {
+            "name": "Southbound - Platform 2",
+            "platformCode": "1",
+            "trains": []
+        }]
+    }]
+}]
 ```
 
 ## Notes
