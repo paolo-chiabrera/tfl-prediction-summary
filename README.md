@@ -35,7 +35,7 @@ var tflPredictionSummary = new TflPredictionSummary();
 `lineCode` (optional) accepted values are: ['B', 'C', 'CI', 'D', 'H', 'J', 'M', 'N', 'P', 'V', 'W']
 
 ```
-const promise = tflPredictionSummary.getPredictionSummary('B');
+const promise = tflPredictionSummary.getPredictionSummary(lineCode);
 
 promise.then(function (response) {
     /* here you get the prediction summary */
