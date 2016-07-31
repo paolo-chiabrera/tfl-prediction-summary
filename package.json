@@ -1,6 +1,6 @@
 {
   "name": "tfl-prediction-summary",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "TFL Prediction Summary API",
   "homepage": "https://github.com/paolo-chiabrera/tfl-prediction-summary",
   "author": {
